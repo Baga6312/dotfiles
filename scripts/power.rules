@@ -1,0 +1,2 @@
+ACTION="change", SUBSYSTEM=="power_supply" , ATTR{type}=="Mains", ATTR{online}=="1" , ENV{DISPLAY}=":0" , ENV={XAUTHORITY}="$HOME/.Xauthority" RUN+="/usr/bin/su -c '$HOME/./local/bin/chargin_notify.sh 1'"
+ACTION="change", SUBSYSTEM=="power_supply" , ATTR{type}=="Mains", ATTR{online}=="0" , ENV{DISPLAY}=":0" , ENV={XAUTHORITY}="$HOME/.Xauthority" RUN+="/usr/bin/su -c '$HOME/./local/bin/chargin_notify.sh 0'"
