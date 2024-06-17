@@ -12,6 +12,9 @@ if [[ "$1" == "-" ]]; then
     dunstify -a "changeVolume" -u low -i audio-volume-high -h string:x-dunst-stack-tag:$msgTag \
 	    -h int:value:"$((volume- 5))" "Volume: $((volume - 5 ))%"
 
+
+
+
 elif [[ "$1" == "+" ]]; then
 	
     # Increase volume
