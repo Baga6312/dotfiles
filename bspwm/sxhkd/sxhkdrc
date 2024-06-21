@@ -35,10 +35,11 @@ super + space
 
 # power menu 
 super + BackSpace 
-	~/code/dotfiles-rice/scripts/power_menu.sh
+	$HOME/code/dotfiles-rice/scripts/power_menu.sh
 
 # wifi menu selector 
-	~/code/dotfiles-rice/scripts/wifi-selector.sh
+super + twosuperior
+	$HOME/code/dotfiles-rice/scripts/wifi-selector.sh 
 
 
 ##################################
