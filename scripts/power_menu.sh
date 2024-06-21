@@ -2,7 +2,17 @@
 
 # Power menu script using tofi
 
-CHOSEN=$(printf " \n\U0020\U23FB\n \U1F5D8\n\U0020\U23FB\n\U1F4E4" | rofi -dmenu -i -theme-str '@import "/home/dt/code/dotfiles-rice/bspwm/rofi/power.rasi" ') 
+lockscreen="\Uf033e"
+switchuser="\Uf0019"
+logoutt="\Uf0343"
+suspendd="\Uf04b2"
+hibernate="\U2A00"
+reboot="\Uf0709"
+shutdown="\Uf0425"
+cancel="\Uf0156"
+
+
+CHOSEN=$(printf "$lockscreen\n$logoutt\n$suspendd\n$hibernate\n$reboot\n$shutdown "  | rofi -dmenu -i -theme-str '@import "/home/dt/code/dotfiles-rice/bspwm/rofi/power.rasi" ') 
 
 case "$CHOSEN" in
 	"Lock") lockscreen ;;
