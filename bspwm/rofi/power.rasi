@@ -1,5 +1,5 @@
 * {
-    font: "Figtree 13";
+    font: "Source Code Pro 18";
     g-spacing: 5px;
     g-margin: 30px 10px 30px 10px ;
     b-color: #000000FF;
@@ -19,10 +19,11 @@
 configuration {
     modi: "drun"; 
     show-icons: true;
+    icon-theme : "Papirus" ; 
 }
 
 listview {
-    columns: 3  ;
+    columns: 5  ;
     lines: 1;
     fixed-height: true;
     fixed-columns: true;
@@ -33,7 +34,7 @@ listview {
 
 window {
     transparency: "real";
-    width: 450px;
+    width: 850px;
     border-radius: @b-radius;
     background-color: @wbg-color;
     border: @w-border;
