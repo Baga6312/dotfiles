@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-notify-send "Scanning available Wi-Fi networks..."
+notify-send "Scanning available Wi-Fi Networks..."
 # Get a list of available wifi connections and morph it into a nice-looking list
 wifi_list=$(nmcli --fields "SECURITY,SSID" device wifi list | sed 1d | sed 's/  */ /g' | sed -E "s/WPA*.?\S/ /g" | sed "s/^--/ /g" | sed "s/  //g" | sed "/--/d")
 
@@ -12,7 +12,7 @@ elif [[ "$connected" =~ "disabled" ]]; then
 fi
 
 # Use rofi to select wifi network
-chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID: " )
+chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID: " -theme-str '@import "/home/dt/code/dotfiles-rice/bspwm/rofi/menu.rasi"')
 # Get name of connection
 read -r chosen_id <<< "${chosen_network:3}"
 

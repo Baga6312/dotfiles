@@ -1,1 +1,147 @@
-/home/dt/.config/sxhkd/sxhkdrc
+##################################
+##                              ##
+##   wm independent hotkeys     ##
+##                              ##
+##################################
+
+# terminal emulator
+super + Return
+  	kitty 	
+
+# execute firefox 
+super + alt +  f 
+	firefox	
+
+# file manager
+super + e 
+	thunar 
+
+# open obsidian 
+super + o 
+	obsidian 
+# open vscode 
+super + c 
+	code 
+
+##################################
+##                              ##
+##          hotkeys             ##
+##                              ##
+##################################
+
+# search menu 
+super + space  
+	rofi -show drun -i -theme-str '@import "code/dotfiles-rice/bspwm/rofi/menu.rasi" '
+
+# power menu 
+super + BackSpace 
+	~/code/dotfiles-rice/scripts/power_menu.sh
+
+# wifi menu selector 
+	~/code/dotfiles-rice/scripts/wifi-selector.sh
+
+
+##################################
+##                              ##
+##          bspwm hotkeys       ##
+##                              ##
+##################################
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd; dunstify -u low 'sxhkd' 'The configuration file has been reloaded successfully!'
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}; dunstify -u low 'bspwm' 'The configuration file has been reloaded successfully!'
+
+# restart dunst 
+super + ctrl + d  
+	killall dunst ;dunstify -u low 'dunst' 'The configuration file has been reloaded successfully!'
+
+# close and kill 
+super + q
+	bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+# change volume 
+XF86AudioRaiseVolume
+	$HOME/code/dotfiles-rice/scripts/change_volume.sh + 5 
+
+XF86AudioLowerVolume
+	$HOME/code/dotfiles-rice/scripts/change_volume.sh - 5
+
+XF86AudioMute
+	$HOME/code/dotfiles-rice/scripts/change_volume.sh 
+
+
+#screenshotand paste it the clipboard 
+super + shift + p 
+	$HOME/code/dotfiles-rice/scripts/screen_shot.sh
+
+##################################
+##                              ##
+##          state/flags         ##
+##                              ##
+##################################
+
+# expand a window
+ctrl + alt+  {Left,Down,Up,Right}
+	bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# set the window state 
+super + {t,shift + t,s,f} 
+	bspc node -t {tiled, pseudo_tiled , floating , fullscreen} 
+
+##################################
+##                              ##
+##          focus/swap          ##
+##                              ##
+##################################
+
+# Switch workspace
+super + {Left,Right}
+	bspc desktop -f {prev,next}.local
+
+# change focus between windows 
+alt + Tab 
+	bspc node -f next.local.window 
+alt + shift + Tab 
+	bspc node -f prev.local.window 
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+##################################
+##                              ##
+##          move/resize		##
+##                              ##
+##################################
+
+# expand a window by moving one of its side outward
+super + alt + {Left ,Down ,Up ,Right }
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + shift + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + shift + alt +{Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
