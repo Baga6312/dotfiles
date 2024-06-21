@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash 
 
 export XAUTHORITY=$HOME/.Xauthority 
 export DISPLAY=:0 

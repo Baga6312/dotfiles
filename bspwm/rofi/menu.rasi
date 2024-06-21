@@ -1,101 +1,138 @@
-* {
-    font: "Figtree 13";
-    g-spacing: 10px;
-    g-margin: 5px  ;
-    b-color: #000000FF;
-    fg-color: #FFFFFFFF;
-    fgp-color: #888888FF;
-    b-radius: 10px;
-    g-padding: 5px;
-    hl-color: #FFFFFFFF;
-    hlt-color: #000000FF;
-    alt-color: #111111FF;
-    wbg-color: #000000CC;
-    w-border: 5px solid;
-    w-border-color: #FFFFFFFF;
-    w-padding: 12px;
-}
 
 configuration {
-/*    modi: "drun";*/ 
-    show-icons: true;
-    display-drun: "";
-}
+	display-drun : " :" ; 
+	display-window : "Window" ; 
+	drun-display-format : "{icon} {name} "; 
+	modi : "window, run , drun " ; 
+	show-icons : true ; 
+	icon-theme : "Papirus" ; 
+}   
 
-listview {
-    columns: 1 ;
-    lines: 7;
-    fixed-height: true;
-    fixed-columns: true;
-    cycle: false ;
-    scrollbar: true ;
-    border: 0px solid;
+@theme "/dev/null" 
+
+* {
+        selected-normal-background: red ;
+        selected-normal-foreground: red ;
+	bg : #11121D ; 
+	bg-alt : #444b6a ; 
+	
+	fg : #FFFFFF ; 
+	fg-alt : #787c99 ; 
+	
+	background-color : @bg ; 
+	
+	border : 0 ; 
+	margin : 0 ; 
+	padding : 0 ; 
+	spacing : 0 ; 
 }
 
 window {
-    transparency: "real";
-    width: 650px;
-    border-radius: @b-radius;
-    background-color: @wbg-color;
-    border: @w-border;
-    border-color: @w-border-color;
-    padding: @w-padding;
+    width: 580;
+    location: center;
+    anchor:   center;
+    padding: 10px ; 
+//     border-color: red ;
+    border:  2px;
+    border-radius: 20px;
+    spacing: 0;
+    children:  [mainbox];
+    orientation: horizontal;
 }
 
-prompt {
-    text-color: @fg-color;
-}
-
-inputbar {
-    children: ["prompt", "entry"];
-    spacing: @g-spacing;
-}
-
-entry {
-    placeholder: "Search Apps";
-    text-color: @fg-color;
-    placeholder-color: @fgp-color;
-}
 
 mainbox {
-    spacing: @g-spacing;
-    margin: @g-margin;
-    padding: @g-padding;
-    children: ["inputbar", "listview", "message"];
-}
-
-element {
-    spacing: @g-spacing;
-    margin: @g-margin;
-    padding: @g-padding;
-    border: 0px solid;
-    border-radius: @b-radius;
-    border-color: @b-color;
-    background-color: transparent;
-    text-color: @fg-color;
-}
-
-element normal.normal {
-	background-color: transparent;
-	text-color: @fg-color;
-}
-
-element alternate.normal {
-	background-color: @alt-color;
-	text-color: @fg-color;
-}
-
-element selected.active {
-	background-color: @hl-color;
-	text-color: @hlt-color;
-}
-
-element selected.normal {
-	background-color: @hl-color;
-	text-color: @hlt-color;
+    spacing: 10px;
+    children: [ inputbar, message, listview ];
 }
 
 message {
-    background-color: red;
-    border: 0px solid;
+    border-color:  #565f89;
+    border:  0px 2px 2px 2px;
+//    border-radius: 10px;
+    padding: 5px;
+    background-color: #1f2335;
 }
+
+inputbar {
+    color:  #fff;
+    font-weight: 400;
+    margin: -3px;
+    padding: 11px;
+    border: 2px 2px 2px 2px;
+    border-radius:  15px 15px 0px 0px;
+    border-color:  @bg ;
+    font: "Source Code Pro 18";
+}
+
+entry,prompt,case-indicator {
+    text-font: inherit;
+    text-color:inherit;
+}
+
+prompt {
+    margin: 0px 0.3em 0em 0em ;
+}
+
+listview {
+    lines: 8;
+}
+
+entry {
+    placeholder: "Search for Apps ";
+    cursor: text;
+    color : gray ;
+}
+
+element {
+    padding: 6px;
+    vertical-align: 0.5;
+    border: 8px;
+    border-radius: 4px;
+    background-color: #292e42;
+    color: #29a4bd;
+    font:inherit;
+    format: bold;
+}
+
+element-text {
+    format: bold;
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element selected.normal {
+    color: #fff;
+    background-color: #EE4E4E ;
+   border-radius : 15px ; 
+}
+
+element normal active {
+    foreground: #29a4bd;
+}
+
+element normal urgent {
+    foreground: #545c7e;
+}
+
+element alternate active {
+    foreground: #29a4bd;
+}
+
+element alternate urgent {
+    foreground: #545c7e;
+}
+
+element selected active {
+    background-color: #29a4bd;
+    foreground: #1d202f;
+}
+
+element-icon {
+   background-color :#292e42; 
+} 
+
+element-icon selected  {
+   background-color :#EE4E4E; 
+} 
+
