@@ -35,12 +35,15 @@ super + space
 
 # power menu 
 super + BackSpace 
-	$HOME/code/dotfiles-rice/scripts/power_menu.sh
+#	$HOME/code/dotfiles-rice/scripts/power_menu.sh
+	rofi -show window 
 
 # wifi menu selector 
 super + twosuperior
 	$HOME/code/dotfiles-rice/scripts/wifi-selector.sh 
 
+# active apps 
+	rofi -show window -i  -theme-str "@import '/home/dt/code/dotfiles-rice/bspwm/rofi/menu.rasi'" 
 
 ##################################
 ##                              ##
