@@ -48,7 +48,7 @@ This repository includes dotfiles for customizing multiple aspects of a Linux sy
 
    ```bash
    git clone git@github.com:xArcGit/dotfiles.git
-   ``
+   ```
 
    or
 
