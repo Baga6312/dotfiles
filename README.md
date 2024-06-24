@@ -48,7 +48,7 @@ This repository includes dotfiles for customizing multiple aspects of a Linux sy
 
    ```bash
    git clone git@github.com:xArcGit/dotfiles.git
-   ```
+   ``
 
    or
 
@@ -78,8 +78,25 @@ This repository includes dotfiles for customizing multiple aspects of a Linux sy
 ## Screenshots 
 
 - `Shift` + `Super` + `w` for changing wallpaper
+<p>
+   <img src="screenshot/screenshot_2.png">
+</p>
 
 ## Keynindings 
+| Keys | Action |
+|:-|:-|
+|<kbd>super</kbd> + <kbd>Enter</kbd><br><kbd>super</kbd> + <kbd>s</kbd> | make terminal<br>Open a floating terminal.
+|<kbd>alt</kbd> + <kbd>@space</kbd>| Display menu to select a theme.
+|<kbd>super</kbd> + <kbd>@space</kbd>| Apps Menu.
+|<kbd>super</kbd> + <kbd>alt</kbd> + <kbd>w</kbd>| Opens a menu to select a wallpaper.
+|<kbd>super</kbd> + <kbd>h</kbd><br><kbd>super</kbd> + <kbd>u</kbd>|Hides bar/s<br>unhide bar/s
+|<kbd>Print</kbd>| Takes screenshot.
+|<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>[plus,minus,t]</kbd>| Changes transparency on focused window.
+|<kbd>ctrl</kbd> + <kbd>super</kbd> + <kbd>alt</kbd> + <kbd>p</kbd><br><kbd>ctrl</kbd> + <kbd>super</kbd> + <kbd>alt</kbd> + <kbd>r</kbd><br><kbd>ctrl</kbd> + <kbd>super</kbd> + <kbd>alt</kbd> + <kbd>k| Power off computer<br>Restart computer<br>Brute kill a window/process
+|<kbd>super</kbd> + <kbd>alt</kbd> + <kbd>r</kbd>| Restart bspwm.
+
+And more.. You need to look sxhkdrc file for more.
+
 
 ## Contributing
 
