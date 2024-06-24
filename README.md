@@ -5,7 +5,6 @@
 <p align="center">
    <img src="screenshot/file-regular.svg" width="90">
 </p>
-<p align="center"> ━━━━━━ ❖ ━━━━━━ </p> 
 <!-- Description -->
 
 <p align="center">Fully-featured floating/tiling window manager-based dotfiles for Arch Linux</p>
@@ -106,3 +105,4 @@ And more.. You need to look sxhkdrc file for more.
 ## Contributing
 
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
+<p align="center"> ━━━━━━ ❖ ━━━━━━ </p> 
