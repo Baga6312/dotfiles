@@ -1,10 +1,10 @@
 <!-- Title -->
 <h1 align="center"><strong>Dotfiles</strong></h1>
 
-<p align="center"> ━━━━━━ ❖ ━━━━━━ </p> 
 <p align="center">
    <img src="screenshot/file-regular.svg" width="90">
 </p>
+<p align="center"> ━━━━━━ ❖ ━━━━━━ </p> 
 <!-- Description -->
 
 <p align="center">Fully-featured floating/tiling window manager-based dotfiles for Arch Linux</p>
