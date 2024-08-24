@@ -11,9 +11,11 @@ configuration {
 @theme "/dev/null" 
 
 * {
-        selected-normal-background: red ;
-        selected-normal-foreground: red ;
-	bg : #11121D ; 
+        selected-normal-background: #0E0F0F ;
+        selected-normal-foreground: #0E0F0F ; 
+
+
+	bg : #0E0F0F ; 
 	bg-alt : #444b6a ; 
 	
 	fg : #FFFFFF ; 
@@ -28,11 +30,10 @@ configuration {
 }
 
 window {
-    width: 580;
+    width: 650;
     location: center;
     anchor:   center;
     padding: 10px ; 
-//     border-color: red ;
     border:  2px;
     border-radius: 20px;
     spacing: 0;
@@ -49,7 +50,6 @@ mainbox {
 message {
     border-color:  #565f89;
     border:  0px 2px 2px 2px;
-//    border-radius: 10px;
     padding: 5px;
     background-color: #1f2335;
 }
@@ -85,12 +85,12 @@ entry {
 }
 
 element {
-    padding: 6px;
+    padding: 10px;
     vertical-align: 0.5;
     border: 8px;
-    border-radius: 4px;
-    background-color: #292e42;
-    color: #29a4bd;
+    border-radius: 10px;
+    background-color: #2A2B2A;
+    color: #E8E8E8;
     font:inherit;
     format: bold;
 }
@@ -102,13 +102,13 @@ element-text {
 }
 
 element selected.normal {
-    color: #fff;
-    background-color: #EE4E4E ;
-   border-radius : 15px ; 
+    color: #000;
+    background-color:#E8E8E8 ;
+    border-radius : 10px ; 
 }
 
 element normal active {
-    foreground: #29a4bd;
+    foreground: #2A2B2A ;
 }
 
 element normal urgent {
@@ -124,7 +124,7 @@ element alternate urgent {
 }
 
 element selected active {
-    background-color: #29a4bd;
+    background-color: #2A2B2A ;
     foreground: #1d202f;
 }
 
@@ -133,6 +133,6 @@ element-icon {
 } 
 
 element-icon selected  {
-   background-color :#EE4E4E; 
+   background-color : #E8E8E8 ; 
 } 
 

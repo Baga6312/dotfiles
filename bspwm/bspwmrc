@@ -20,11 +20,12 @@ sxhkd &
 polybar -c ~/code/dotfiles-rice/bspwm/polybar/emilia.ini & 
 
 # execute picon config 
-picom --config $HOME/.config/picom/picom.conf & 
+#picom --config $HOME/.config/picom/picom.conf & 
+picom --config ~/code/dotfiles-main/bspwm/picom/picom.conf 
 
 # execute dunst 
 dunst & 
 
 # execute wallpaper changer 
-while true ; do $HOME/code/dotfiles-rice/scripts/change_wallpaper.sh	; sleep 300 ; done  
+while true ; do $HOME/code/dotfiles-main/scripts/change_wallpaper.sh	; sleep 300 ; done  
 
