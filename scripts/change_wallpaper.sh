@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory containing your wallpapers
-WALLPAPER_DIR=$HOME/code/dotfiles-rice/bspwm/feh/walls
+WALLPAPER_DIR=$HOME/code/dotfiles-main/bspwm/feh/walls
 
 # Get a random image file from the wallpaper directory
 WALLPAPER=$(ls $WALLPAPER_DIR | shuf -n 1)
