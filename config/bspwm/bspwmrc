@@ -17,15 +17,15 @@ bspc config gapless_monocle      true
 sxhkd & 
 
 # execute polybar  
-polybar -c ~/code/dotfiles-main/bspwm/polybar/emilia.ini & 
+polybar -c ~/code/dotfiles-main/config/bspwm/polybar/emilia.ini & 
 
 # execute picon config 
 #picom --config $HOME/.config/picom/picom.conf & 
-picom --config ~/code/dotfiles-main/bspwm/picom/picom.conf 
+picom --config ~/code/dotfiles-main/config/bspwm/picom/picom.conf 
 
 # execute dunst 
 dunst & 
 
 # execute wallpaper changer 
 #while true ; do $HOME/code/dotfiles-main/scripts/change_wallpaper.sh	; sleep 300 ; done  
-$HOME/code/dotfiles-main/scripts/change_wallpaper.sh & 
+sh ~/code/dotfiles-main/config/scripts/change_wallpaper.sh & 

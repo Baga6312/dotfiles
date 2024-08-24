@@ -116,20 +116,20 @@ element normal urgent {
 }
 
 element alternate active {
-    foreground: #29a4bd;
+    foreground: #424240;
 }
 
 element alternate urgent {
-    foreground: #545c7e;
+    foreground: #424240;
 }
 
 element selected active {
     background-color: #2A2B2A ;
-    foreground: #1d202f;
+    foreground: #424240;
 }
 
 element-icon {
-   background-color :#292e42; 
+   background-color :#2A2B2A; 
 } 
 
 element-icon selected  {

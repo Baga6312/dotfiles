@@ -31,18 +31,18 @@ super + c
 
 # search menu 
 super + space  
-	rofi -show drun -i -theme-str '@import "/home/dt/code/dotfiles-main/bspwm/rofi/menu.rasi" '
+	rofi -show drun -i -theme-str '@import "/home/dt/code/dotfiles-main/config/bspwm/rofi/menu.rasi" '
 
 # power menu 
 super + BackSpace 
-	$HOME/code/dotfiles-main/scripts/power_menu.sh
+	$HOME/code/dotfiles-main/config/scripts/power_menu.sh
 
 # wifi menu selector 
-super + twosuperior
-	$HOME/code/dotfiles-rice/scripts/wifi-selector.sh 
+super + alt +l 
+	$HOME/code/dotfiles-main/config/scripts/wifi-selector.sh 
 
 # active apps 
-	rofi -show window -i  -theme-str "@import '/home/dt/code/dotfiles-rice/bspwm/rofi/menu.rasi'" 
+	rofi -show window -i  -theme-str "@import '/home/dt/code/dotfiles-rice/config/bspwm/rofi/menu.rasi'" 
 
 ##################################
 ##                              ##
