@@ -28,4 +28,5 @@ dunst &
 
 # execute wallpaper changer 
 #while true ; do $HOME/code/dotfiles-main/scripts/change_wallpaper.sh	; sleep 300 ; done  
-sh ~/code/dotfiles-main/config/scripts/change_wallpaper.sh & 
+
+/home/dt/code/dotfiles-main/config/scripts/change_wallpaper.sh &

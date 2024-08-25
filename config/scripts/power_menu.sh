@@ -12,7 +12,7 @@ shutdown="\Uf0425"
 cancel="\Uf0156"
 
 
-CHOSEN=$(printf "$lockscreen\n$logoutt\n$suspendd\n$hibernate\n$reboot\n$shutdown "  | rofi -dmenu -i -theme-str '@import "/home/dt/code/dotfiles-main/bspwm/rofi/power.rasi" ') 
+CHOSEN=$(echo "$lockscreen\n$logoutt\n$suspendd\n$hibernate\n$reboot\n$shutdown "  | rofi -dmenu -i -theme-str '@import "/home/dt/code/dotfiles-main/bspwm/rofi/power.rasi" ') 
 
 case "$CHOSEN" in
 	$lockscreen ) 
